@@ -32,9 +32,9 @@ jobs:
         shell: bash
         run: |
           shopt -s globstar
-          if compgen -G "docs/**/*.md" > /dev/null; then
-            echo "Formatting Markdown files in docs/..."
-            prettier --write "docs/**/*.md"
+          if compgen -G "**/*.md" > /dev/null; then
+            echo "Formatting Markdown files in project..."
+            prettier --write "**/*.md"
           else
             echo "No Markdown files found in docs/"
           fi
